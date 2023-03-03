@@ -32,7 +32,7 @@ end
 def convert char, shift, min_value, max_value 
 
   shifted_ascii_value = char.ord + shift
-  while shifted_ascii_value > max_value
+  if shifted_ascii_value > max_value
     remainder = (shifted_ascii_value - max_value) % 26;
     if remainder == 0
       return max_value.chr;
@@ -41,7 +41,7 @@ def convert char, shift, min_value, max_value
     end 
   end
 
-  while shifted_ascii_value < min_value
+  if shifted_ascii_value < min_value
     remainder = (min_value - shifted_ascii_value) % 26
     if remainder == 0
       return min_value.chr;
