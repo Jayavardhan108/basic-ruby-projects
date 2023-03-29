@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/vardhan/repos/basic-ruby-projects/balanced_bst/tree.rb:16 Tree#build_tree:
+
+    [1;34m14[0m: [32mdef[0m [1;34mbuild_tree[0m(sorted_array, start, finish)
+    [1;34m15[0m:   binding.pry
+ => [1;34m16[0m:   [32mreturn[0m [1;36mnil[0m [32mif[0m start > finish
+    [1;34m17[0m:   [32mreturn[0m [1;34;4mNode[0m.new(sorted_array[start]) [32mif[0m start == finish
+    [1;34m18[0m: 
+    [1;34m19[0m:   mid = start + (finish - start) / [1;34m2[0m
+    [1;34m20[0m:   root = [1;34;4mNode[0m.new(sorted_array[mid])
+    [1;34m21[0m:   root.left = build_tree(sorted_array, start, mid - [1;34m1[0m)
+    [1;34m22[0m:   root.right = build_tree(sorted_array, mid + [1;34m1[0m, finish)
+    [1;34m23[0m:   root
+    [1;34m24[0m: [32mend[0m
+
